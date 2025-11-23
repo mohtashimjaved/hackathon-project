@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed - BuzzFeed</title>
+    <link rel="shortcut icon" href="./download-removebg-preview.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar glass-panel">
+        <div class="nav-content container">
+            <div class="logo-text">
+                <i class="fa-solid fa-bolt"></i> BuzzFeed
+            </div>
+            <div class="nav-actions">
+                <div class="user-badge">
+                    <div class="avatar-sm"><i class="fa-solid fa-user"></i></div>
+                    <span id="user-display-name">User</span>
+                </div>
+                <button id="theme-toggle" class="icon-btn"><i class="fa-solid fa-moon"></i></button>
+                <button id="logout-btn" class="icon-btn danger"><i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container main-layout">
+
+        <section class="create-card glass-panel">
+            <div class="create-body">
+                <div class="avatar-md"><i class="fa-solid fa-user"></i></div>
+                <textarea id="post-text" placeholder="What's happening?"></textarea>
+            </div>
+
+            <div id="emoji-container" class="emoji-section hidden">
+                <div class="emoji-header">
+                    <span>Pick an Emoji</span>
+                    <button id="close-emoji-btn" title="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="emoji-grid" class="emoji-grid">
+                </div>
+            </div>
+
+            <div class="create-footer">
+                <div class="footer-left">
+                    <button id="emoji-toggle-btn" class="icon-btn-rect" title="Add Emoji">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </button>
+
+                    <div class="media-input-wrapper">
+                        <i class="fa-solid fa-link"></i>
+                        <input type="text" id="post-image-url" placeholder="Image URL...">
+                    </div>
+                </div>
+
+                <button id="publish-btn" class="btn-primary btn-md">
+                    Post <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </section>
+        <section class="toolbar">
+            <div class="search-bar glass-panel">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search posts...">
+            </div>
+            <div class="sort-dropdown glass-panel">
+                <select id="sort-select">
+                    <option value="latest">Latest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="most-liked">Most Popular</option>
+                </select>
+                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+            </div>
+        </section>
+
+        <div id="feed" class="feed-stream"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

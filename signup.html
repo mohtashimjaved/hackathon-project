@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - BuzzFeed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo-circle">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h1>Create Account</h1>
+                <p>Join the community today.</p>
+            </div>
+            
+            <form id="signup-form" class="auth-form">
+                <div class="input-field">
+                    <label>Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="signup-name" placeholder="John Doe" required>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="signup-email" placeholder="name@company.com" required>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label>Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signup-pass" placeholder="Create a password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary btn-block btn-lg">Create Account</button>
+                <p class="switch-text">Already have an account? <a href="login.html">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
